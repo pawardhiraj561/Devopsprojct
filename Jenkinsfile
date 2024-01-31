@@ -1,19 +1,10 @@
-pipeline { 
-    agent any 
-    options {
-        skipStagesAfterUnstable()
-    }
+pipeline {
+    agent any
+    
     stages {
-        stage('Build') { 
-            steps {  
-            }
-        }
-        stage('Test'){
-            steps { 
-            }
-        }
-        stage('Deploy') {
+        stage('Echo Message') {
             steps {
+                echo 'Hello, Jenkins!'
             }
         }
     }
